@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import setup.BaseTest;
+import utils.TestData;
 
 public class webMobileTests extends BaseTest {
 
@@ -27,7 +28,7 @@ public class webMobileTests extends BaseTest {
         assert ((WebDriver) getDriver()).getTitle().equals("Google") : "This is not Google homepage";
 
         searchField = getPo().getWelement("searchTextField");
-        searchField.sendKeys("EPAM");
+        searchField.sendKeys(TestData.getProperty("wordForSearch"));
         searchField.sendKeys(Keys.ENTER);
         Assert.assertFalse(getPo().getWelements("results").isEmpty(), "The list of results is equal null");
         // Log that test finished

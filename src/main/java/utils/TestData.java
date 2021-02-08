@@ -1,7 +1,27 @@
 package utils;
 
+import java.io.IOException;
+import java.util.Properties;
+
 public class TestData {
-    public static final String USERNAME = "Elith Vasenko";
-    public static final String PASSWORD = "vas05ENKO$$";
-    public static final String EMAIL = "Elizaveta_Vasenko@epam.com";
+
+    private static Properties properties;
+
+    public static String getProperty(String key) {
+        if (properties == null) {
+            properties = readProperties();
+        }
+        return properties.getProperty(key);
+    }
+
+    private static Properties readProperties() {
+        properties = new Properties();
+        String propertyFile = "/testData.properties";
+        try {
+            properties.load(TestData.class.getResourceAsStream(propertyFile));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties;
+    }
 }
