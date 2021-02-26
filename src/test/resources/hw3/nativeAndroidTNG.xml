@@ -3,6 +3,7 @@
     <parameter name="appType" value="native"></parameter>
     <parameter name="deviceName" value="Google Pixel 2"></parameter>
     <parameter name="platformName" value="Android"></parameter>
+    <parameter name="app" value="./src/main/resources/EPAMTestApp.apk"></parameter>
     <parameter name="appPackage" value="platkovsky.alexey.epamtestapp"></parameter>
     <parameter name="appActivity" value="platkovsky.alexey.epamtestapp.activities.LoginActivity"></parameter>
     <test name="Native android tests">

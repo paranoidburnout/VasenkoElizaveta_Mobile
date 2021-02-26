@@ -70,6 +70,46 @@
                 <suite.file>./src/test/resources/webTNG.xml</suite.file>
             </properties>
         </profile>
+
+        <profile>
+            <id>webCloudAndroid</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/hw3/webAndroidTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>nativeCloudAndroid</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/hw3/nativeAndroidTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>webCloudIOS</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/hw3/webIOSTNG.xml</suite.file>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>nativeCloudIOS</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suite.file>./src/test/resources/hw3/nativeIOSTNG.xml</suite.file>
+            </properties>
+        </profile>
     </profiles>
 
 

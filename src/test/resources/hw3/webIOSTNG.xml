@@ -3,7 +3,7 @@
     <parameter name="appType" value="web"></parameter>
     <parameter name="udid" value="00008020-00191DE0119A002E"></parameter>
     <parameter name="platformName" value="iOS"></parameter>
-    <parameter name="browserName" value="Chrome"></parameter>
+    <parameter name="browserName" value="Safari"></parameter>
     <test name="Web iOS tests">
         <groups>
             <run>
