@@ -9,7 +9,7 @@ import static utils.Data.*;
 
 public class nativeMobileTests extends BaseTest {
 
-    @Test(groups = {"native"}, description = "This simple test for registering a new account and logging into it")
+    @Test(groups = {"native", "nativeCloud"}, description = "This simple test for registering a new account and logging into it")
     public void simpleNativeTest() throws IllegalAccessException, NoSuchFieldException, InstantiationException {
 
         getPo().getWelement("registerBtn").click();

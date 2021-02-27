@@ -72,6 +72,7 @@ public class BaseTest implements IDriver {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
         // Timeouts tuning
         appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
