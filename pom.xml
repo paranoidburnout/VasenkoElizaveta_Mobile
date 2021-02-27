@@ -9,7 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <token>
+        </token>
     </properties>
+    
     <dependencies>
         <dependency>
             <groupId>io.appium</groupId>
@@ -35,6 +38,7 @@
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <ts.appium>
+                            https://EPM-TSTF:${token}@mobilecloud.epam.com/wd/hub
                         </ts.appium>
                     </systemPropertyVariables>
                 </configuration>
