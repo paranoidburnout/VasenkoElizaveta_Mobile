@@ -1,15 +1,13 @@
 package scenarios;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import setup.BaseTest;
-import utils.TestData;
 
 import static utils.Data.*;
 
 public class nativeMobileTests extends BaseTest {
 
-    @Test(groups = {"native"}, description = "This simple test for registering a new account and logging into it")
+    @Test(groups = {"native", "nativeCloud"}, description = "This simple test for registering a new account and logging into it")
     public void simpleNativeTest() throws IllegalAccessException, NoSuchFieldException, InstantiationException {
 
         getPo().getWelement("registerBtn").click();
@@ -22,8 +20,7 @@ public class nativeMobileTests extends BaseTest {
         getPo().getWelement("loginPassword").sendKeys(PASSWORD);
         getPo().getWelement("signInBtn").click();
 
-        Assert.assertEquals(getPo().getWelement("budgetActivityTitle").getText(), TestData.getProperty("title"),
-                "Wrong title of users name");
+        assert (getPo().getWelement("budgetActivityTitle").isDisplayed()) : "Page BudgetActivity is not opened";
 
         System.out.println("Simplest Android native test done");
     }

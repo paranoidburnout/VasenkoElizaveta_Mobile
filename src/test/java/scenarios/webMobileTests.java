@@ -5,10 +5,11 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import setup.BaseTest;
 import utils.TestData;
+
+import static org.testng.AssertJUnit.assertNotNull;
 
 public class webMobileTests extends BaseTest {
 
@@ -30,7 +31,9 @@ public class webMobileTests extends BaseTest {
         searchField = getPo().getWelement("searchTextField");
         searchField.sendKeys(TestData.getProperty("wordForSearch"));
         searchField.sendKeys(Keys.ENTER);
-        Assert.assertFalse(getPo().getWelements("results").isEmpty(), "The list of results is equal null");
+
+        assertNotNull(getPo().getWelements("results"));
+
         // Log that test finished
         System.out.println("Site opening done");
     }
